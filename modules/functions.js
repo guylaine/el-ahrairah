@@ -132,7 +132,7 @@ module.exports = (client) => {
   client.chaos = function() {
     // Check if chaos in enable. If it is, set everything on fire. Otherwise, return nothing.
     var chaosNumber = 1;
-    var randomNumber = client.getRandomInt(0, 2);
+    var randomNumber = client.getRandomInt(0, 5);
 
     if(chaosNumber == randomNumber){
       client.isChaos = true;
