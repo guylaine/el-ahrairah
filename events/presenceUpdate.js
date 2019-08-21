@@ -17,7 +17,9 @@ module.exports = (client, member) => {
   	return;
   }
 
-  const streamMessage = `OYÉ! OYÉ! @everyone ! ${member.user.username} started streaming ${member.user.presence.game.name}. Go check it out! ${member.user.presence.game.url}`;
+  //console.log(`User.presence = ${member.user.presence} and membre.presence = ${member.presence}`);
+
+  //const streamMessage = `OYÉ! OYÉ! @everyone ! ${member.user.username} started streaming ${member.user.presence.game.name}. Go check it out! ${member.user.presence.game.url}`;
 
   member.guild.channels.find("name", "bot-test").send(streamMessage).catch(console.error);
 };
