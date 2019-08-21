@@ -4,17 +4,17 @@ module.exports = (client, member) => {
 
   // If the game is null, not being streamed or is the same person as before, don't proceed (don't send a streaming notif.)
   if(!member.presence.equals(member.user.presence)){
-	// if the old member is not the new member
-  	if (member.user.presence.game == null) {
-		return;
-  	}
+  // if the old member is not the new member
+    if (member.user.presence.game == null) {
+    return;
+    }
 
-  	if(member.user.presence.game.type != 1) {
-		return;
-	}
+    if(member.user.presence.game.type != 1) {
+    return;
+  }
   } else {
-  	// if the old member is the new member, return
-  	return;
+    // if the old member is the new member, return
+    return;
   }
 
   //console.log(`User.presence = ${member.user.presence} and membre.presence = ${member.presence}`);
